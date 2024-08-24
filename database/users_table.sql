@@ -1,0 +1,13 @@
+-- this file creates the users table
+
+CREATE TABLE users_table (
+	user_id INT AUTO_INCREMENT PRIMARY KEY,
+	phone_number VARCHAR(15) NOT NULL UNIQUE,
+	username VARCHAR(50) NOT NULL,
+	email VARCHAR(100) NOT NULL UNIQUE,
+	password_hash VARCHAR(255) NOT NULL,
+	profile_picture VARCHAR(255),
+	status_message VARCHAR(255),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
