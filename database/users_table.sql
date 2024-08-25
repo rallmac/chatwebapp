@@ -1,5 +1,3 @@
--- this file creates the users table
-
 CREATE TABLE users_table (
 	user_id INT AUTO_INCREMENT PRIMARY KEY,
 	phone_number VARCHAR(15) NOT NULL UNIQUE,
