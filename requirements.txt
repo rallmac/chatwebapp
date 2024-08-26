@@ -1,0 +1,4 @@
+Flask==2.x.x
+Flask-SQLAlchemy==2.x.x
+Alembic==1.x.x
+python-dotenv==0.x.x
