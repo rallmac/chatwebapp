@@ -1,5 +1,3 @@
---This table contains contacts added to a profile
-
 CREATE TABLE contacts_table (
 	user_id INT NOT NULL,
 	contact_user_id INT NOT NULL,

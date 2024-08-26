@@ -7,5 +7,5 @@ CREATE TABLE chats_table (
 	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	FOREIGN KEY (user1_id) REFERENCES users_table(user_id),
 	FOREIGN KEY (user2_id) REFERENCES users_table(user_id),
-	FOREIGN KEY (last_message_id) REFERENCES messages_table(message_id),
+	FOREIGN KEY (last_message_id) REFERENCES messages_table(message_id)
 );
