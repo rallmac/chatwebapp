@@ -1,0 +1,156 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.chat-list {
+    list-style: none;
+}
+
+.chat-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chat-list img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-user {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* Main Content */
+.main-content {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.chat-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+}
+
+.chat-preview h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Profile Section */
+.profile-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-edit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.profile-edit-btn:hover {
+    background-color: #2980b9;
+}

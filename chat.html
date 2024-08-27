@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App - Ongoing Chat</title>
+    <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Chat App</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Recent Chats</h2>
+            <ul class="chat-list">
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <span class="chat-user">John Doe</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <span class="chat-user">Jane Smith</span>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <span class="chat-user">Alice Johnson</span>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="chat-section">
+                <div class="chat-header">
+                    <h2>Chat with John Doe</h2>
+                </div>
+                <div class="chat-box">
+                    <div class="message received">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <div class="message-content">
+                            <p>Hey! How are you doing?</p>
+                            <span class="message-time">10:30 AM</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <div class="message-content">
+                            <p>I'm doing well, thanks! How about you?</p>
+                            <span class="message-time">10:32 AM</span>
+                        </div>
+                    </div>
+                    <div class="message received">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <div class="message-content">
+                            <p>All good here. Just getting ready for the meeting later.</p>
+                            <span class="message-time">10:35 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button type="button">Send</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="profile-section">
+            <h2>Your Profile</h2>
+            <img src="https://via.placeholder.com/80" alt="User Profile">
+            <p>[Username]</p>
+            <a href="#" class="profile-edit-btn">Edit Profile</a>
+        </aside>
+    </div>
+</body>
+</html>
