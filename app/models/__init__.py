@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from app import db
-form app.models.user import User
+from app.models.user import User
 from app.models.message import Message
 from app.models.friendship import Friendship
 
