@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+    
+{% block head %}
+    <title>Chat Page</title>
+{% endblock %}
+    
+{% block body %}
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const socket = io.connect('http://' + document.domain + ':' + location.port);
+
+            socket.on('connect', () => {
+                socket.emit('join', {room: 'default'});
+            });
+
+            socket.on('message', (msg) => {
+                const messages = document.getElementById('messages');
+                const message = document.createElement('li');
+                message.textContent = msg;
+                messages.appendChild(message);
+            });
+
+            document.getElementById('send').onclick = () => {
+                const msg = document.getElementById('message').value;
+                socket.emit('message', {room: 'default', message: msg});
+                document.getElementById('message').value = '';
+            };
+        });
+    </script>
+    <section class="chat-section">
+        <ul id="messages"></ul>
+        <div class="message-input">
+            <input id="message" class="form-control"  type="text" placeholder="Enter your message">
+            <button id="send">Send</button>
+        </div>
+    </section>
+{% endblock %}

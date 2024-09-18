@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>View Users</title>
+{% endblock %}
+
+{% block body %}
+<div class="container page-container">
+    <h2 class="text-center">People you may know</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="messages list-unstyled">
+                {% for category, message in messages %}
+                    <li class="alert alert-{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered styled-table">
+        <thead class="thead-dark">
+            <tr>
+                <!--<th>ID</th>-->
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <!--<td>{{ user.id }}</td>-->
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <div class="go-back-home">
+        <button class="button" onclick="window.location.href='{{ url_for('auth.home') }}'">Back to Home</button>
+    </div>
+</div>
+{% endblock %}
